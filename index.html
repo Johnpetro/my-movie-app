@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my page</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            /* background-color: #363636; */
+        }
+        body{
+            /* background-color: #363636; */
+            background-color: #363636;
+            margin: 0;
+            overflow-x: hidden;
+        }
+        .container{
+            background-image:url(bg.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            width: 100%;
+            height: 550px;
+            background-color: whitesmoke;
+            /* height: 80vh; */
+            
+            
+            
+        }
+        .site_title{
+            position: absolute;
+            top: 50%;
+            font-family: sans-serif;
+            z-index: 2;
+            left: 20%;
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+        }
+        .site_title h2{
+            color: #ab9e9e;
+            font-size: 60px;
+            align-items: center;
+            margin: 0;
+        }
+        .site_title p{
+            font-size: 40px;
+            color:#ab9e9e;
+            align-items: center;
+            margin: 0;
+        }
+        .overlay{
+          
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            width: 100%;
+            height: 550px;
+            background: rgba(0, 0, 0, 0.815);
+            
+            
+            
+        }
+
+        .product-card {
+            border:1px solid grey;
+            width: 230px;
+            /* position: relative; */
+            margin-top:1%;
+            margin-right: 2% ;
+            padding: 0.5%;
+            border-radius: 0.5rem;
+            background:white !important;
+            left: 0%;
+             /* Remove this code */
+            top: 0%; 
+             /* Remove this code */
+        }
+
+        .product-card:first-child {
+            margin-left: 0;
+            /* background: red; */
+        }
+
+        .product-card:last-child { 
+            margin-right:0;
+        }
+
+        .badge {
+            display: none;
+            position: relative;
+            left: 3px;
+            top: 30px;
+            border-radius: 30px;
+            text-transform: uppercase;
+            font-size: 13px;
+            font-weight: 700px;
+            background: orange;
+            color: white;
+            z-index:1;
+            padding: 3px 10px;
+            /* -webkit-transform: translateY(-50%); */
+            /* -ms-transform: translateY(-50%); */
+        }
+
+        .product-tumb {
+            display: flex;
+            overflow: hidden;
+            justify-content: center;
+            height: 200px;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+        }
+
+        .product-tumb img:hover {
+            transform: scale(108%);
+            transition: all 300ms ease;
+        }
+
+        .product-tumb img {
+            margin: 0;
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+            transition: all 300ms ease;
+        }
+
+        .product-catagory {
+            display: block;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #ccc;
+            margin-bottom: 18px;
+        }
+
+        .product-details {
+            padding: 2%;
+        }
+
+        .product-details h4 a {
+            font-weight: 500;
+            display: block;
+            margin-bottom: 18px;
+            text-transform: uppercase;
+            color: #363636;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .product-details h4 a:hover {
+            color: #fbb72c;
+        }
+
+        .product-details p {
+            color: #999;
+            width: 100%;
+            /* overflow: hidden; */
+
+        }
+
+        .product-bottom-details {
+            overflow: hidden;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+
+        .product-bottom-details div {
+            float: left;
+            width: 50%;
+        }
+
+        .product-price {
+            font-size: 15px;
+            display: inline-block;
+            /* margin-right: 5px;
+             margin:0; */
+            color: #fbb72c;
+            font-weight: 500;
+        }
+
+        .product-links {
+            text-align: right;
+        }
+
+        .product-links a {
+            display: inline-block;
+            margin-left: 5px;
+            color: #e1e1e1;
+            transition: 0.3s;
+            font-size: 17px;
+        }
+
+        .product-links a:hover {
+            color: #fbb72c;
+        }
+        .container2{
+           
+            margin-left: 50px;
+            display: grid;
+            padding: 12px;
+            width: 80%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            /* justify-content: center ; */
+            /* justify-content: ; */
+            gap: 50px;
+            /* margin: 2rem 6rem; */
+            /* flex-direction: column; */
+        }
+        /* .product-card{
+            grid-column: 100px,50px;
+        } */
+
+
+        @media screen and( max-width:500px) {
+
+            .search form input{
+            background-color: red;
+            border: 1px solid black;
+            /* padding: /; */
+            height: 50px;
+            border-radius: 30px;
+            width: 60px;
+        }
+        }
+
+        .search{
+            margin: 70px;
+            display: flex;
+            flex-wrap:wrap ;
+            justify-content: center;
+        }
+        .search form input{
+
+            background-color: rgb(205, 203, 203);
+            border: 2px solid transparent;
+            /* padding: /; */
+            height: 10px;
+            border-radius: 30px;
+            width: 600px;
+            box-shadow: 0 0 0 0.5;
+            font-size: 18px;
+            padding: 21px;
+            
+        }
+
+        input:focus{
+            outline: none;
+            /* font-size:12px */
+        }
+.icon{
+    display: none;
+    /* font-size: 300px; */
+    position: absolute;
+    top:623px;
+    
+    left: 850px;
+    -webkit-transform: translateY(2px);
+    -ms-transform: translateY(-2px);
+
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="site_title">
+            <h2>Movies For Fun..</h2>
+            <p>Welcome To Our Site, Enjoy The Moves</p>
+        </div>
+        <div class="overlay"></div>
+        <div>
+        </div>
+        <div class="search">
+            <form>
+                <input type="text" name="" id="search">
+                <span class="icon"><img src="search.svg" alt=""></span>
+            </form>
+        </div>
+        <div class="container2">
+           
+             </div>
+            <script src="app.js"></script>
+           
+</body>
+</html>
